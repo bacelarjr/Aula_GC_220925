@@ -1,2 +1,7 @@
 # Aula_GC_220925
-A
+
+
+# Calculadora de Multiplicação 
+# Adicionado opção de mudança da background color
+# Nome da Página mudado de 'Soma Simples' para 'Multiplicação'
+

@@ -38,3 +38,11 @@ function multiplicar() {
     // Estamos montando uma frase para exibir o resultado de forma amigável.
     document.getElementById('resultado').innerHTML = "O resultado da multiplicação é: " + resultadoMultiplicacao;
 }
+
+    //6. BOTÃO MUDANÇA DE COR 
+
+    // Adiciona um ouvinte de evento para o seletor de cor.
+    document.getElementById('colorPicker').addEventListener('input', function() {
+     // Altera a cor de fundo do corpo da página para o valor do seletor de cor.
+        document.body.style.backgroundColor = this.value;
+    });
