@@ -7,7 +7,72 @@ body {
     align-items: center;            /* Centraliza o conteúdo verticalmente. */
     height: 100vh;                  /* Define a altura do corpo para 100% da altura da tela. */
     margin: 0;                      /* Remove a margem padrão do navegador. */
+    flex-direction: column; 
+    align-items: center;
 }
+
+
+/* botão */
+.top-button-container {
+    position: fixed; /* Fixa o elemento na tela. */
+    top: 15px;       /* Distância do topo da tela. */
+    right: 15px;     /* Distância da direita da tela. */
+    z-index: 1000;   /* Garante que o botão fique acima de outros elementos. */
+    display: flex;   /* Usa Flexbox para alinhar o label e o input de cor. */
+    align-items: center; /* Alinha verticalmente o label e o input. */
+    background-color: rgba(235, 231, 231, 0.8); /* Fundo semi-transparente para o contêiner. */
+    padding: 8px 12px; /* Espaçamento interno menor. */
+    border-radius: 20px; /* Bordas bem arredondadas (estilo pill). */
+    box-shadow: 0 2px 5px rgba(11, 3, 3, 0.1); /* Sombra mais suave. */
+}
+
+/* Estilo para o label do seletor de cor */
+.top-button-container label {
+    font-size: 0.9em; /* Texto um pouco menor. */
+    color: #555;      /* Cor do texto mais suave. */
+    margin-right: 8px; /* Espaço entre o label e o input. */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas. */
+}
+
+/* Estilo para o input de cor dentro do container */
+.top-button-container input[type="color"] {
+    width: 30px; /* Largura menor para o input de cor. */
+    height: 30px; /* Altura menor para o input de cor. */
+    padding: 2px; /* Espaçamento interno menor. */
+    border: 1px solid #ccc; /* Borda leve. */
+    border-radius: 50%; /* Torna o input de cor circular. */
+    cursor: pointer;
+    background: none; /* Remove o fundo padrão do input de cor. */
+    -webkit-appearance: none; /* Remove estilos padrão do navegador para Webkit. */
+    -moz-appearance: none;    /* Remove estilos padrão do navegador para Mozilla. */
+    appearance: none;         /* Remove estilos padrão do navegador. */
+    overflow: hidden;         /* Esconde partes extras do seletor se houver. */
+}
+
+/* Para navegadores Webkit (Chrome, Safari), esconde o quadrado interno padrão */
+.top-button-container input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.top-button-container input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%; /* Garante que a amostra de cor seja redonda. */
+}
+
+/* Para navegadores Firefox */
+.top-button-container input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 50%; /* Garante que a amostra de cor seja redonda. */
+}
+
+/* Opcional: Efeito hover para o contêiner do botão de cor */
+.top-button-container:hover {
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo um pouco mais opaco no hover. */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada no hover. */
+}
+
+
+
 
 /* O seletor '.container' aplica estilos ao elemento com a classe 'container'. */
 .container {
